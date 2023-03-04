@@ -30,7 +30,9 @@ def excluir_pessoa(nome):
     except:
         print("\nNão foi possível excluir")
 
-inserir_pessoas("Francisquinha", 19)
+#inserir_pessoas("Francisquinha", 19)
+#inserir_pessoas("Eduardo", 24)
+#inserir_pessoas("Marcio", 51)
 #excluir_pessoa("Francisquinha")
 consultar_todos()
 #alterar_nome("Eduardo", "Luiz Eduardo")
