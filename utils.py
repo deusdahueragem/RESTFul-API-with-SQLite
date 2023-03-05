@@ -1,4 +1,4 @@
-from models import Pessoas
+from models import Pessoas, Usuarios
 
 def inserir_pessoas(nome, idade):
     pessoa = Pessoas(nome=nome, idade=idade)
@@ -30,10 +30,23 @@ def excluir_pessoa(nome):
     except:
         print("\nNão foi possível excluir")
 
+def insere_usuario(login, senha):
+    usuario = Usuarios(login=login, senha=senha)
+    usuario.save()
+
+def consulta_todosusuarios():
+    usuario = Usuarios.query.all()
+    for i in usuario:
+        print("\nUsuario encontrado: " + i.login)
+
 #inserir_pessoas("Francisquinha", 19)
 #inserir_pessoas("Eduardo", 24)
 #inserir_pessoas("Marcio", 51)
 #excluir_pessoa("Francisquinha")
-consultar_todos()
+#consultar_todos()
 #alterar_nome("Eduardo", "Luiz Eduardo")
 #consultar_nomes("Luiz Eduardo")
+
+#insere_usuario("eduardo", "34014154")
+#insere_usuario("francisquinha", "123456")
+consulta_todosusuarios()
